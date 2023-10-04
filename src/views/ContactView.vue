@@ -18,3 +18,28 @@
         </div>
     </div>
 </template>
+
+<style>
+.contact {
+  -webkit-text-fill-color: #f03f35;
+  text-align: left;
+}
+.contact .tabs div {
+  margin-top: 25px;
+}
+.contact a {
+  text-decoration: none;
+  color: #f03f35;
+}
+
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact ul li {
+  margin: 3px;
+}
+
+</style>

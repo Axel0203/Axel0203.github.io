@@ -15,4 +15,31 @@
 </script>
 
 <style>
+.main #text {
+  color: #f03f35;
+  text-align: left;
+  margin: auto;
+  flex: 1;
+}
+
+.main #photo {
+  flex: 1;
+}
+
+@media (min-width: 700px) {
+  .main {
+    display: flex;
+  }
+}
+
+@media (max-width: 700px) {
+  .about #text p {
+    text-align: justify;
+  }
+}
+
+.main #photo img {
+  max-width: 100%;
+}
+
 </style>
