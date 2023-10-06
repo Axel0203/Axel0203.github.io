@@ -3,14 +3,16 @@
 
 <template>
   <nav class="navbar">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
-        <RouterLink to="/projects">projects</RouterLink>
+      <a href="/">Home</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">Contact</a>
   </nav>
   <RouterView />
 </template>
 
 <style >
+
+
 
 * {
   font-family: "Work Sans", sans-serif;
@@ -29,12 +31,15 @@ h6 {
 }
 .navbar {
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #f03f35;
+
 }
 .navbar a:link,
 .navbar a:visited {
   background-color: #f03f35;
+
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -46,15 +51,15 @@ h6 {
   background-color: red;
 }
 
-#container {
-  width: 66%;
+.container {
   padding: 50px;
-  border: 2px solid rgba(18, 18, 18, 0.136);
+  border-left: 2px solid rgba(18, 18, 18, 0.136);
+  border-right: 2px solid rgba(18, 18, 18, 0.136);
   min-height: 500px;
-  margin: auto;
+  margin: 0 20vh;
 }
 
-#container a:hover {
+.container a:hover {
   color: #ff0d00;
   font-size: 1.1rem;
 }
