@@ -12,11 +12,26 @@ export default {
 
 <template>
   <nav class="navbar">
-        <RouterLink  @click="switchLinkClass(0)" to="/">Home</RouterLink>
-        <RouterLink  @click="switchLinkClass(1)"  to="/contact">Contact</RouterLink>
-        <RouterLink  @click="switchLinkClass(2)"  to="/projects">Projects</RouterLink>
+        <RouterLink  to="/">Home</RouterLink>
+        <RouterLink   to="/contact">Contact</RouterLink>
+        <RouterLink   to="/projects">Projects</RouterLink>
   </nav>
-  <RouterView />
+  
+  <!--
+    <RouterView />
+
+    <router-view v-slot="{Component}">
+    <transition>
+      <Component :is="Component" />
+    </transition>
+  </router-view>
+  -->
+
+  <router-view v-slot="{Component}">
+    <transition name="slide-down" mode="out-in">
+      <Component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style >
@@ -80,5 +95,15 @@ h6 {
   display: inline-block;
 }
 
+.slide-down-enter-from,
+.slide-down-leave-to {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: 0.3s ease-out;
+}
 
 </style>

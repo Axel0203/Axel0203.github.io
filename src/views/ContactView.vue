@@ -1,7 +1,7 @@
 <template> 
     <div id="container">
         <div class="contact">
-            <h1>CONTACT</h1>
+            <h1>Contact</h1>
             <div class="tabs">
                 <div class="mail">
                     <h2>MAIL</h2>
